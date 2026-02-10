@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Eng. Bunny ❤️</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: none;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Blurred background image layer (bunny.jpeg) */
+    .bg-image {
+      position: fixed;
+      inset: 0;
+      background-image: url('/images/bunny.jpeg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(12px) brightness(0.65) saturate(0.95);
+      transform: scale(1.05);
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    /* Color gradient overlay on top of the image */
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(211,143,238,0.45), rgba(202,55,202,0.45));
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .scene {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .scene.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.15);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      padding: 2.5rem;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    /* Layout for card content with an image on the right */
+    .card-inner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .card-inner .text {
+      flex: 1 1 auto;
+      text-align: left;
+    }
+
+    .card-inner img {
+      width: 140px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    @media (max-width: 700px) {
+      .card-inner { flex-direction: column; }
+      .card-inner .text { text-align: center; }
+      .card-inner img { width: 100%; height: auto; }
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .heart {
+      font-size: 3rem;
+      animation: pulse 1.5s infinite;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .scroll-hint {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-image" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <section class="scene active">
+    <div class="card">
+      <div class="card-inner">
+        <div class="text">
+          <div class="heart">❤️</div>
+          <h1>Hey Eng. Baby Bunny</h1>
+          <p>This isn’t just a page. It’s a little timeline of us — the moments that turned into memories, even with the timeskip</p>
+        </div>
+        <img src="/images/mwila.png" alt="Us">
+      </div>
+    </div>
+  </section>
+
+  <section class="scene">
+    <div class="card">
+      <div class="card-inner">
+        <div class="text">
+          <h2>How It Started</h2>
+          <p>It began simply a high school conversation, a laugh, a moment at a mall that felt small at the time… but changed everything.</p>
+        </div>
+        <img src="/images/bunny.jpeg" alt="How it started">
+      </div>
+    </div>
+  </section>
+
+  <section class="scene">
+    <div class="card">
+      <div class="card-inner">
+        <div class="text">
+          <h2>The Growth</h2>
+          <p>We learned each other, rather still learning. The good things, the tough ones, the lessons that are making us stronger together and as indiviuals to this day.</p>
+        </div>
+        <img src="/images/flowerguy.jpeg" alt="Growth">
+      </div>
+    </div>
+  </section>
+
+  <section class="scene">
+    <div class="card">
+      <div class="card-inner">
+        <div class="text">
+          <h2>The Now</h2>
+          <p>Today, we stand here — choosing each other, still laughing, still dreaming, still building.</p>
+        </div>
+        <img src="/images/mwilanme.png" alt="The now">
+      </div>
+    </div>
+  </section>
+
+  <section class="scene">
+    <div class="card">
+      <div class="card-inner">
+        <div class="text">
+          <h2>My Promise</h2>
+          <p>No matter where life takes us, I’m grateful for you, for us, and for every chapter still to come.</p>
+          <div class="heart">💖</div>
+        </div>
+        <img src="/images/heartguy.jpeg" alt="Promise">
+      </div>
+    </div>
+  </section>
+
+  <section class="scene">
+    <div class="card">
+      <div class="card-inner">
+        <div class="text">
+          <h1>Happy Valentines Day</h1>
+          <p>you deserve the world and over</p>
+          <div class="heart">💖</div>
+        </div> 
+        <img src="/images/heartguy.jpeg" alt="Promise">
+      </div>
+    </div>
+  </section>
+  <div class="scroll-hint">⬇ Scroll to continue the story Mama</div>
+
+  <footer>
+    Made with ❤️ just for you 
+  </footer>
+
+  <script>
+    const scenes = document.querySelectorAll('.scene');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    scenes.forEach(scene => observer.observe(scene));
+  </script>
+</body>
+</html>
